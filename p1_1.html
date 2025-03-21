@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceScope</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <!-- Header Section -->
+ <header>
+    <div class="header-content">
+      <div class="header-left">
+        <div style="display: flex; align-items: center;">
+          <img src="logo.png" alt="PriceScope Logo" style="height: 40px; margin-right: 10px;">
+          <h1>PriceScope</h1>
+        </div>
+        <p>Find the best prices for your favorite mobile models</p>
+      </div>
+      <div class="header-right">
+        <a href="#language" title="Change Language">
+          <!-- Language Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-translate" viewBox="0 0 16 16">
+            <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+            <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+          </svg>
+        </a>
+        <a href="#login" title="Login">
+          <!-- Login Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-person-badge" viewBox="0 0 16 16">
+            <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z"/>
+          </svg>
+        </a>
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+          <svg class="dropdown-toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+          <div class="dropdown-menu">
+            <a href="p1_1.html">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="content-container">
+      <h2>Search for the best prices of mobile phones!</h2>
+      <form>
+        <label for="search">Enter Mobile Model:</label>
+        <input type="text" id="search" name="search" placeholder="e.g., iPhone 13">
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+    </div>
+
+    <!-- Trending Searches Section -->
+    <section class="trending">
+      <h2>Trending Searches</h2><br>
+      <div class="trending-container">
+        <!-- <div class="card-row"> -->
+          <div class="card">
+            <img src="iphone13.jpeg" alt="iPhone 13" >
+            <div class="card-body">
+              <h5 class="card-title">iPhone 13</h5>
+              <p class="card-text">Starting from Rs.43,999</p>
+              <a href="https://www.amazon.in/Apple-iPhone-13-128GB-Blue/dp/B09G9BL5CP" class="btn btn-primary">Click to Explore</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="s23.jpeg" alt="Samsung Galaxy S23" >
+            <div class="card-body">
+              <h5 class="card-title">Samsung Galaxy S23</h5>
+              <p class="card-text">Starting from Rs.70,999</p>
+              <a href="s23ultra.html" class="btn btn-primary">Click to Explore</a>
+            </div>
+          </div>
+        <!-- </div> -->
+        <!-- <div class="card-row"> -->
+          <div class="card">
+            <img src="gp7.jpeg" alt="Google Pixel 7" >
+            <div class="card-body">
+              <h5 class="card-title">Google Pixel 7</h5>
+              <p class="card-text">Starting from Rs.29,999</p>
+              <a href="https://www.amazon.in/Pxel-7a-Snow-128-RAM/dp/B0DR61K9L1" class="btn btn-primary">Click to Explore</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="op11.jpeg" alt="OnePlus 11" >
+            <div class="card-body">
+              <h5 class="card-title">OnePlus 11</h5>
+              <p class="card-text">Starting from Rs.56,999</p>
+              <a href="https://www.amazon.in/OnePlus-Eternal-Green-128GB-Storage/dp/B0BQJLCQD3" class="btn btn-primary">Click to Explore</a>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-left">
+      <p style="color: white;">&copy; 2025 PriceScope. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tac.html">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
