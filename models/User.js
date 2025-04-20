@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-
-// Define the schema
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -14,13 +12,11 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
-  },
-  // 🔥 Store all searches by user
+  },  
   searchHistory: {
     type: [String],
     default: []
   },
-  // 🔥 Track user's most searched product
   mostSearchedItem: {
     type: String,
     default: ''
