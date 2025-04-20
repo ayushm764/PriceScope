@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceScope - Login</title>
+  <link rel="icon" type="image/x-icon" href="/logo.png">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .profile-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-dropdown-toggle {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .profile-dropdown-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      background-color: #fff;
+      color: #333;
+      min-width: 160px;
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    .profile-dropdown-menu a,
+    .profile-dropdown-menu form {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .profile-dropdown-menu a:hover,
+    .profile-dropdown-menu form:hover {
+      background-color: #f0f0f0;
+    }
+
+    .profile-dropdown.active .profile-dropdown-menu {
+      display: block;
+    }
+
+    .logout-btn {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      color: inherit;
+      padding: 10px 15px;
+      font-family: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <div style="display: flex; align-items: center;">
+          <img src="/logo.png" alt="PriceScope Logo" style="height: 40px; margin-right: 10px;">
+          <h1>PriceScope</h1>
+        </div>
+        <p>Find the best prices for your favorite mobile models</p>
+      </div>
+      <div class="header-right">
+        <% if (user) { %>
+          <div class="profile-dropdown">
+            <button class="profile-dropdown-toggle">
+              Welcome, <%= user.username || user.phoneNumber %> ⏷
+            </button>
+            <div class="profile-dropdown-menu">
+              <a href="/profile">My Profile</a>
+              <a href="/profile/search-history">Search History</a>
+              <form action="/auth/logout" method="GET">
+                <button class="logout-btn">Logout</button>
+              </form>
+            </div>
+          </div>
+        <% } else { %>
+          <a href="/auth/login" title="Login">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+              class="bi bi-person-badge" viewBox="0 0 16 16">
+              <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path
+                d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z" />
+            </svg>
+          </a>
+          <a href="/auth/signup" title="Sign Up" style="margin-left:10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white"
+              class="bi bi-person-plus" viewBox="0 0 16 16">
+              <path d="M8 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              <path
+                d="M8 8a5.978 5.978 0 0 0-4.546 2.01C2.13 11.215 2 11.864 2 12.5V14h4v-1a2 2 0 0 1 4 0v1h4v-1.5c0-.636-.13-1.285-1.454-2.49A5.978 5.978 0 0 0 8 8z" />
+              <path fill-rule="evenodd"
+                d="M13.5 5a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5z" />
+            </svg>
+          </a>
+        <% } %>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <h2>Login</h2>
+      <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+      <% } %>
+      <form action="/auth/login" method="POST">
+        <div>
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="text" name="phoneNumber" id="phoneNumber" required>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account yet? <a href="/auth/signup">Sign up here</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p style="color: white;">&copy; 2025 PriceScope. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const dropdown = document.querySelector(".profile-dropdown");
+      const toggle = document.querySelector(".profile-dropdown-toggle");
+
+      if (toggle) {
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

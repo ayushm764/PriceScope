@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #142850;
+      color: #d3d3d3;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #d3d3d3;
+      text-decoration: none;
+      margin-left: 15px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #00aaff;
+    }
+
+    /* Deals Section */
+    .deals-container {
+      padding: 30px 20px;
+    }
+    
+    .deal-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .deal-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .deal-left {
+      font-size: 24px; /* Larger font for site name */
+      font-weight: 600;
+      color: #142850;
+    }
+
+    .deal-description {
+      font-size: 16px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .deal-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .deal-price {
+      font-size: 20px; /* Larger font for price */
+      font-weight: 600;
+      color: #27496d;
+    }
+
+    .buy-now-btn {
+      padding: 12px 30px; /* Larger button size */
+      background-color: #142850;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 16px; /* Larger button text */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .buy-now-btn:hover {
+      background-color: #00aaff;
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    /* @media (max-width: 768px) {
+      .deal-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .deal-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .buy-now-btn {
+        width: 100%; /* Full-width button on smaller screens */
+        /* text-align: center; */
+      /* }
+    } */ 
+  </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+          <div class="header-left">
+            <div style="display: flex; align-items: center;">
+              <!-- <img src="logo.png" alt="PriceScope Logo" style="height: 40px; margin-right: 10px;"> -->
+              <h1>Deals and Discounts</h1>
+            </div>
+           
+          </div>
+          <div class="header-right">
+            
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+              <svg class="dropdown-toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+              <div class="dropdown-menu">
+                <a href="/">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+  <div class="deals-container">
+
+    <div class="deal-box">
+        <div class="deal-left">
+          Samsung
+          <p class="deal-description">Latest smartphones with unbeatable prices.</p>
+        </div>
+        <div class="deal-right">
+          <div class="deal-price">₹79,999</div>
+          <a href="https://www.samsung.com/in/smartphones/galaxy-s23-ultra/buy/?srsltid=AfmBOorCrA5fanF9PeiLn7thJd-sntlDcSNDspxjzJZtnTmh8wNBe9rH" target="_blank" class="buy-now-btn">Buy Now</a>
+        </div>
+      </div>
+
+
+    <div class="deal-box">
+      <div class="deal-left">
+        Amazon
+        <p class="deal-description">Great discounts on electronics and more.</p>
+      </div>
+      <div class="deal-right">
+        <div class="deal-price">₹71,999</div>
+        <a href="https://www.amazon.in/Samsung-Galaxy-Ultra-Green-Storage/dp/B0BT9CXXXX?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=AQUYM0O99MFUT" target="_blank" class="buy-now-btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="deal-box">
+      <div class="deal-left">
+        Flipkart
+        <p class="deal-description">Exclusive deals on mobiles and gadgets.</p>
+      </div>
+      <div class="deal-right">
+        <div class="deal-price">₹72,980</div>
+        <a href="https://www.flipkart.com/samsung-galaxy-s23-ultra-5g-green-256-gb/p/itm77dc35f7779a4?pid=MOBGMFFX32WUYXUJ&lid=LSTMOBGMFFX32WUYXUJHPGIDU&marketplace=FLIPKART&cmpid=content_mobile_8965229628_gmc" target="_blank" class="buy-now-btn">Buy Now</a>
+      </div>
+    </div>
+
+    
+
+    <div class="deal-box">
+      <div class="deal-left">
+        Sahivalue
+        <p class="deal-description">Explore premium Apple devices and accessories.</p>
+      </div>
+      <div class="deal-right">
+        <div class="deal-price">₹70,999</div>
+        <a href="https://www.sahivalue.com/products/buy-new-unboxed-samsung-galaxy-s23-ultra-5g-global-256gb-512gb-1tb-/293890000042188271?srsltid=AfmBOor08BFBlfsbtL-1gzSCtkUWNiSKaKCGGZi3Aypa9hkMSxkpZTYYTFo" target="_blank" class="buy-now-btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="deal-box">
+      <div class="deal-left">
+        MallMart
+        <p class="deal-description">Affordable electronics and home appliances.</p>
+      </div>
+      <div class="deal-right">
+        <div class="deal-price">₹78,990</div>
+        <a href="https://mall2mart.com/products/samsung-galaxy-s23-ultra-5g-phantom-black-12gb-256gb-storage-1?variant=40351481069701&country=IN&currency=INR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOooSiey6g-UOG6VKCoi1uL1wQpRx0ZjWDGqQwQW41_sgf0cuCBsFK3c" target="_blank" class="buy-now-btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="deal-box">
+        <div class="deal-left">
+          JioMart
+          <p class="deal-description">Affordable electronics and home appliances.</p>
+        </div>
+        <div class="deal-right">
+          <div class="deal-price">₹77,000</div>
+          <a href="https://www.jiomart.com/p/electronics/samsung-galaxy-s23-ultra-5g-256-gb-12-gb-ram-cream-mobile-phone/598095315" target="_blank" class="buy-now-btn">Buy Now</a>
+        </div>
+      </div>
+
+    <div class="deal-box">
+        <div class="deal-left">
+          Designinfo
+          <p class="deal-description">Affordable electronics and home appliances.</p>
+        </div>
+        <div class="deal-right">
+          <div class="deal-price">₹71,999</div>
+          <a href="https://www.designinfo.in/p/samsung-galaxy-s23-ultra-5g-512gb-green-imported/" target="_blank" class="buy-now-btn">Buy Now</a>
+        </div>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-left">
+      <p style="color: white;">&copy; 2025 PriceScope. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="pp.html">Privacy Policy</a>
+      <a href="tac.html">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".dropdown-toggle");
+        const dropdown = document.querySelector(".dropdown");
+
+        menuToggle.addEventListener("click", function (event) {
+          event.stopPropagation();
+          dropdown.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("active");
+          }
+        });
+      });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - PriceScope</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .terms-box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            margin: auto;
+            text-align: left;
+        }
+
+        h1 {
+            color: #142850;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #00aaff;
+            padding-bottom: 5px;
+        }
+
+        p,
+        ul {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <div style="display: flex; align-items: center;">
+                    <img src="logo.png" alt="PriceScope Logo" style="height: 40px; margin-right: 10px;">
+                    <h1>PriceScope</h1>
+                </div>
+                <p>Find the best prices for your favorite mobile models</p>
+            </div>
+            <div class="header-right">
+        
+
+                <div class="dropdown">
+                    <svg class="dropdown-toggle" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                    <div class="dropdown-menu">
+                        <a href="p1_1.html">Home</a>
+                        <a href="#about">About Us</a>
+                        <a href="#services">Services</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Terms and Conditions</h1>
+        <section class="terms-box">
+            <p class="highlight">IMPORTANT: PLEASE READ THESE TERMS CAREFULLY BEFORE USING PRICESCOPE.</p>
+
+            <p>Welcome to <strong>PriceScope</strong>, your trusted platform for comparing prices and finding the best
+                deals. By accessing our services, you agree to comply with these Terms and Conditions.</p>
+
+            <h2>1. USER AGREEMENT</h2>
+            <p>By using PriceScope, you acknowledge that you have read, understood, and agree to abide by these terms.
+            </p>
+
+            <h2>2. MODIFICATIONS</h2>
+            <p>We reserve the right to update or modify these Terms at any time. Continued use of the service implies
+                acceptance of changes.</p>
+
+            <h2>3. ACCOUNT REGISTRATION</h2>
+            <p>To access certain features, users may be required to register by providing accurate information:</p>
+            <ul>
+                <li>Full Name</li>
+                <li>Valid Email Address</li>
+                <li>Secure Password</li>
+            </ul>
+
+            <h2>4. ACCEPTABLE USE POLICY</h2>
+            <p>Users must not engage in any fraudulent, abusive, or unethical activities, including but not limited to:
+            </p>
+            <ul>
+                <li>Providing false product reviews</li>
+                <li>Scraping data without authorization</li>
+                <li>Attempting to manipulate pricing information</li>
+            </ul>
+
+            <h2>5. PRICING & SUBSCRIPTION</h2>
+            <p>PriceScope offers free access along with premium features available through subscription:</p>
+            <ul>
+                <li>Basic Plan - Free</li>
+                <li>Premium Plan - ₹799/month</li>
+                <li>Business Plan - ₹2399/month</li>
+            </ul>
+
+            <h2>6. REFUND POLICY</h2>
+            <p>Users can request a refund within 7 days of subscribing. No refunds will be processed beyond this period.
+            </p>
+
+            <h2>7. LIABILITY & DISCLAIMER</h2>
+            <p>PriceScope provides price comparisons based on publicly available data. We do not guarantee absolute
+                accuracy or endorse any product.</p>
+
+            <h2>8. GOVERNING LAW</h2>
+            <p>These Terms shall be governed by the laws of India, with disputes handled in the courts of New Delhi.</p>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-left">
+            <p style="color: white;">&copy; 2025 PriceScope. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const toggle = document.querySelector(".dropdown-toggle");
+          const dropdown = document.querySelector(".dropdown");
+      
+          if (toggle && dropdown) {
+            toggle.addEventListener("click", (e) => {
+              e.stopPropagation();
+              dropdown.classList.toggle("active");
+            });
+      
+            document.addEventListener("click", (e) => {
+              if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove("active");
+              }
+            });
+          }
+        });
+      </script>
+      
+</body>
+
+</html>

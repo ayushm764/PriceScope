@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PriceScope</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-dropdown-toggle {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .profile-dropdown-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      background-color: #fff;
+      color: #333;
+      min-width: 160px;
+      border-radius: 4px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    .profile-dropdown-menu a, .profile-dropdown-menu form {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .profile-dropdown-menu a:hover, .profile-dropdown-menu form:hover {
+      background-color: #f0f0f0;
+    }
+
+    .profile-dropdown.active .profile-dropdown-menu {
+      display: block;
+    }
+
+    .logout-btn {
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      color: inherit;
+      padding: 10px 15px;
+      font-family: inherit;
+    }
+  </style>
+</head>
+
+<body>
+    <%- include('partials/header', { user: user }) %>
+      
+
+  <!-- Main Content Section -->
+  <main>
+    <div class="content-container">
+      <h2>Search for the best prices of mobile phones!</h2>
+      <form action="/deals" method="get">
+        <input type="text" name="search" placeholder="e.g., iPhone 13" required>
+        <button type="submit" class="search-btn">Search Deals</button>
+      </form>
+    </div>
+
+    <!-- Trending Searches Section -->
+    <section class="trending">
+      <h2>Trending Searches</h2><br>
+      <div class="trending-container">
+        <div class="card">
+          <img src="iphone13.jpeg" alt="iPhone 13">
+          <div class="card-body">
+            <h5 class="card-title">iPhone 13</h5>
+            <p class="card-text">Starting from Rs.43,999</p>
+            <a href="https://www.amazon.in/Apple-iPhone-13-128GB-Blue/dp/B09G9BL5CP" class="btn btn-primary"
+              target="_blank">Click to Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="s23.jpeg" alt="Samsung Galaxy S23">
+          <div class="card-body">
+            <h5 class="card-title">Samsung Galaxy S23</h5>
+            <p class="card-text">Starting from Rs.70,999</p>
+            <a href="/s23" class="btn btn-primary" target="_blank">Click to Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="gp7.jpeg" alt="Google Pixel 7">
+          <div class="card-body">
+            <h5 class="card-title">Google Pixel 7</h5>
+            <p class="card-text">Starting from Rs.29,999</p>
+            <a href="https://www.amazon.in/Pxel-7a-Snow-128-RAM/dp/B0DR61K9L1" class="btn btn-primary"
+              target="_blank">Click to Explore</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="op11.jpeg" alt="OnePlus 11">
+          <div class="card-body">
+            <h5 class="card-title">OnePlus 11</h5>
+            <p class="card-text">Starting from Rs.56,999</p>
+            <a href="https://www.amazon.in/OnePlus-Eternal-Green-128GB-Storage/dp/B0BQJLCQD3"
+              class="btn btn-primary" target="_blank">Click to Explore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <p style="color: white;">&copy; 2025 PriceScope. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".dropdown-toggle");
+      const dropdown = document.querySelector(".dropdown");
+  
+      if (toggle && dropdown) {
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+        });
+  
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+          }
+        });
+      }
+    });
+  </script>
+  
+</body>
+
+</html>
