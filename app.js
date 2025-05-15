@@ -1,4 +1,3 @@
-// app.js
 const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
@@ -44,12 +43,12 @@ app.use((req, res, next) => {
 const indexRoutes = require('./routes/index');
 const dealsRoutes = require('./routes/deals');
 const authRoutes = require('./routes/auth');
-const profileRoutes = require('./routes/profile'); // 🔥 New profile route
+const profileRoutes = require('./routes/profile');
 
 app.use('/', indexRoutes);
 app.use('/deals', dealsRoutes);
 app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes); // 🔥 Mounting profile routes
+app.use('/profile', profileRoutes); 
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
